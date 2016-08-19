@@ -1,3 +1,21 @@
+
+///////////////////////////////////////////
+
+void InsertionSort(int* A, int size){
+    for(int i = 0; i < size; i++){
+        int hole = i;
+        int value = A[i];
+        
+        while(hole > 0 && A[hole-1] > value){
+            A[hole] = A[hole-1];
+            hole-=1;
+        }
+        
+        A[hole] = value;
+        
+        
+    }   }
+
 ////////////////////////////////////////
 
 void SelectionSort (int* arr, int size){
@@ -14,6 +32,8 @@ void SelectionSort (int* arr, int size){
 }
 
 ////////////////////////////////////////
+
+// Binary Search
 
 void FindElement (int* arr, int size, int element){
     int max,min,avg;
@@ -66,6 +86,36 @@ void sortarr(int *arr,int start,int end){
 
 ////////////////////////////////////////////
 
+//One function QuickSort. (usualy slower)
+
+void quickSort(int* arr, int start, int end) {
+      int i = start, j = end;
+      int tmp;
+      int pivot = arr[(start + end) / 2];
+ 
+      //partition
+      while (i <= j) {
+            while (arr[i] < pivot)
+                  i++;
+            while (arr[j] > pivot)
+                  j--;
+            if (i <= j) {
+                  tmp = arr[i];
+                  arr[i] = arr[j];
+                  arr[j] = tmp;
+                  i++;
+                  j--;
+            }
+      };
+      // recursion
+      if (start < j)
+            quickSort(arr, start, j);
+      if (i < end)
+            quickSort(arr, i, end);
+}
+
+////////////////////////////////////////////
+
 void largest (int* arr, int size){
     int biggest = arr[0];
     for(int i = 1; i < size; i++){
@@ -90,36 +140,9 @@ void smallest (int* arr, int size){
     
 }
 
-///////////////////////////////////////////
-
-void InsertionSort(int* A, int size){
-    for(int i = 0; i < size; i++){
-        int hole = i;
-        int value = A[i];
-        
-        while(hole > 0 && A[hole-1] > value){
-            A[hole] = A[hole-1];
-            hole-=1;
-        }
-        
-        A[hole] = value;
-        
-        
-    }   }
-
 ////////////////////////////////////////////
 
-void PrintChar(char* C){
-    int i = 0;
-    
-    while(C[i] != '\0'){
-        cout << C[i];
-        i++;
-    }
-    cout << endl;
-}
-
-////////////////////////////////////////////
+// Pushes the Value of your choice to the end of the array
 
 void PushValueBack(int* Arr, int size, int value){
     int push;
@@ -135,7 +158,9 @@ void PushValueBack(int* Arr, int size, int value){
     
 }
     
-    ///////////////////////////////////////
+///////////////////////////////////////
+
+// Pushes the Element of your choice to the end of the array
     
 void PushElementBack(int* Arr, int size, int element){
         for(int i = element; i < size-1; i++){
@@ -144,7 +169,7 @@ void PushElementBack(int* Arr, int size, int element){
     
 }
     
-    ///////////////////////////////////////
+///////////////////////////////////////
     
 void ShirtLeft(int* Arr, int size){
     for(int i = 0; i < size-1; i++){
@@ -152,7 +177,7 @@ void ShirtLeft(int* Arr, int size){
     } 
 }
 
-    /////////////////////////////////////
+/////////////////////////////////////
     
 void ShiftRight(int* Arr, int size){
     for(int i = size-1; i!=0; i--){
@@ -160,9 +185,27 @@ void ShiftRight(int* Arr, int size){
     } 
 }
 
-    /////////////////////////////////////
+/////////////////////////////////////
 
+void PrintChar(char* C){
+    int i = 0;
+    
+    while(C[i] != '\0'){
+        cout << C[i];
+        i++;
+    }
+    cout << endl;
+}
 
+///////////////////////////////////////
+
+//Calculate function time
+
+// Time in miliseconds
+    int start_s=clock();
+//Function
+    int stop_s=clock();
+    cout << endl << "time: " << (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000 << endl << endl;
 
 
 
