@@ -15,7 +15,7 @@ void SelectionSort (int* arr, int size){
 
 ////////////////////////////////////////
 
-void FindElement (int arr[], int size, int element){
+void FindElement (int* arr, int size, int element){
     int max,min,avg;
     min = 0;
     max = size-1;
@@ -40,7 +40,7 @@ void FindElement (int arr[], int size, int element){
 
 ///////////////////////////////////////
 
-void largest (int arr[], int size){
+void largest (int* arr, int size){
     int biggest = arr[0];
     for(int i = 1; i < size; i++){
         if(arr[i] > biggest){
@@ -53,7 +53,7 @@ void largest (int arr[], int size){
 
 ////////////////////////////////////////
 
-void smallest (int arr[], int size){
+void smallest (int* arr, int size){
     int smallest = arr[0];
     for(int i = 1; i < size; i++){
         if(arr[i] < smallest){
