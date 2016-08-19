@@ -38,32 +38,6 @@ void FindElement (int* arr, int size, int element){
     
 }
 
-///////////////////////////////////////
-
-void largest (int* arr, int size){
-    int biggest = arr[0];
-    for(int i = 1; i < size; i++){
-        if(arr[i] > biggest){
-            biggest = arr[i];
-        }
-    }
-    cout << biggest << endl;
-    
-}
-
-////////////////////////////////////////
-
-void smallest (int* arr, int size){
-    int smallest = arr[0];
-    for(int i = 1; i < size; i++){
-        if(arr[i] < smallest){
-            smallest = arr[i];
-        }
-    }
-    cout << smallest << endl;
-    
-}
-
 ////////////////////////////////////////
 
 //QUICKSORT (ARRAY[END] = Pivot)
@@ -91,6 +65,32 @@ void sortarr(int *arr,int start,int end){
 }
 
 ////////////////////////////////////////////
+
+void largest (int* arr, int size){
+    int biggest = arr[0];
+    for(int i = 1; i < size; i++){
+        if(arr[i] > biggest){
+            biggest = arr[i];
+        }
+    }
+    cout << biggest << endl;
+    
+}
+
+////////////////////////////////////////
+
+void smallest (int* arr, int size){
+    int smallest = arr[0];
+    for(int i = 1; i < size; i++){
+        if(arr[i] < smallest){
+            smallest = arr[i];
+        }
+    }
+    cout << smallest << endl;
+    
+}
+
+///////////////////////////////////////////
 
 void InsertionSort(int* A, int size){
     for(int i = 0; i < size; i++){
