@@ -66,7 +66,7 @@ void smallest (int* arr, int size){
 
 ////////////////////////////////////////
 
-//QUICKSORT
+//QUICKSORT (ARRAY[END] = Pivot)
 
 int Part(int *arr, int start, int end){
     int pivot = arr[end];
@@ -121,8 +121,47 @@ void PrintChar(char* C){
 
 ////////////////////////////////////////////
 
+void PushValueBack(int* Arr, int size, int value){
+    int push;
+    for(int i = 0; i < size; i++){
+        if(Arr[i] == value){
+            push = i;
+            break;
+        }
+    }
+    for(int i = push; i < size-1; i++){
+        swap(Arr[i],Arr[i+1]);
+    }
+    
+}
+    
+    ///////////////////////////////////////
+    
+    void PushElementBack(int* Arr, int size, int element){
+        for(int i = element; i < size-1; i++){
+            swap(Arr[i], Arr[i+1]);
+    } 
+    
+}
+    
+    ///////////////////////////////////////
+    
+    void ShirtLeft(int* Arr, int size){
+    for(int i = 0; i < size-1; i++){
+        Arr[i] = Arr[i+1];
+    } 
+}
 
+    /////////////////////////////////////
+    
+    
+    void ShiftRight(int* Arr, int size){
+    for(int i = size-1; i!=0; i--){
+        Arr[i] = Arr[i-1];
+    } 
+}
 
+    /////////////////////////////////////
 
 
 
