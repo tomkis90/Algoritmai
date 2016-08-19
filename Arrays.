@@ -137,7 +137,7 @@ void PushValueBack(int* Arr, int size, int value){
     
     ///////////////////////////////////////
     
-    void PushElementBack(int* Arr, int size, int element){
+void PushElementBack(int* Arr, int size, int element){
         for(int i = element; i < size-1; i++){
             swap(Arr[i], Arr[i+1]);
     } 
@@ -146,7 +146,7 @@ void PushValueBack(int* Arr, int size, int value){
     
     ///////////////////////////////////////
     
-    void ShirtLeft(int* Arr, int size){
+void ShirtLeft(int* Arr, int size){
     for(int i = 0; i < size-1; i++){
         Arr[i] = Arr[i+1];
     } 
@@ -154,8 +154,7 @@ void PushValueBack(int* Arr, int size, int value){
 
     /////////////////////////////////////
     
-    
-    void ShiftRight(int* Arr, int size){
+void ShiftRight(int* Arr, int size){
     for(int i = size-1; i!=0; i--){
         Arr[i] = Arr[i-1];
     } 
