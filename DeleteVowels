@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{ 
+    char input[101];
+    char vowels[13]={'A','a','O','o','Y','y','E','e','U','u','I','i','\0'};
+    char temp;
+    cin >> input;
+    for(int i = 0; i < strlen(input); i++){
+        int isvowel = false;
+            for(int j = 0; j < strlen(vowels);j++){
+                if(input[i] == vowels[j]){
+                    isvowel = true;
+                }
+            }
+            
+            if(isvowel == false){
+            cout << input[i];
+            }
+    }
+ 
+}
