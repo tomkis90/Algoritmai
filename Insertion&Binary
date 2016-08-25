@@ -1,0 +1,67 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+void sortarr(int* A, int size);
+void binarysearch(int* A, int size, int element);
+
+int main()
+{
+    int arr[6] = {5,1,3,8,6,2};
+    
+    for(int i = 0; i < 6; i++){
+        cout << arr[i] << "|";
+    }
+    
+    cout << endl << endl;
+    cout << "Insertion sort  ";
+    sortarr(arr,6);
+    cout << endl;
+    for(int i = 0; i < 6; i++){
+        cout << arr[i] << "|";
+    }
+    
+    cout << endl << endl;
+    cout << "Binary search  ";
+    cout << endl;
+    binarysearch(arr,6,3);  
+}
+
+void sortarr(int* A, int size){
+    for(int i=0; i < size; i++){
+        int hole = i;
+        int value = A[i];
+    
+    
+    while(hole > 0 && A[hole-1] > value){
+        A[hole] = A[hole-1];
+        hole-=1;
+    
+    }
+    
+    A[hole] = value;
+} }
+
+void binarysearch(int* A, int size, int element){
+    int min, max, avg;
+    
+    min = 0;
+    max = size-1;
+    
+    while(min <= max){
+        avg=(min+max)/2;
+        
+        if(A[avg] == element){
+            cout << "Position: " << avg << "   Value: " << A[avg] << endl;
+            break;
+        }
+        
+        if(A[avg] > element){
+            max = avg-1;
+        }
+        
+        if(A[avg] < element){
+            min = avg+1;
+        }
+    }
+}
