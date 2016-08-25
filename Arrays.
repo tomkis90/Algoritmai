@@ -41,7 +41,7 @@ void FindElement (int* arr, int size, int element){
     max = size-1;
     
     while(min <= max){
-        avg=min+max / 2;
+        avg=(min+max) / 2;
         
         if(arr[avg] == element){
             cout << avg << "  " <<arr[avg] << endl;
