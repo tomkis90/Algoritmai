@@ -1,0 +1,11 @@
+void sortt(int x, int y, int z){
+    int maxx, minn, mid;
+    
+    maxx = max(x,max(y,z));
+    minn = min(x,min(y,z));
+    
+    mid = (x+y+z) - (minn+maxx);
+    
+    cout << minn << " " << mid << " " << maxx;
+    
+}
