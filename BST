@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>.
+
+using namespace std;
+
+//Definition of Node for Binary search tree
+
+struct BstNode {
+    int data;
+    BstNode* left;
+    BstNode* right;
+};
+
+//Function to create a new node (in the heap memory)
+BstNode* GetNewNode(int data){
+    BstNode* newNode = new BstNode();
+    newNode ->data = data;
+    newNode ->left=newNode->right=NULL;
+    return newNode;
+    
+}
+
+// Insert data, returns address of root note
+BstNode* Insert(BstNode* root, int data){
+    if(root == NULL){ // if the tree is empty
+        root = GetNewNode(data);
+    }
+    // if data is lesser, inster to the left
+    else if(data <= root->data){
+        root->left = Insert(root->left, data);
+    }
+    //if false, insert to the right.
+    else {
+        root->right - Insert(root->right,data);
+    }
+    return root;
+    
+}
+
+
+
+int main()
+{
+    BstNode* root = NULL;     // create an emtpy tree.
+    
+
+}
+    
