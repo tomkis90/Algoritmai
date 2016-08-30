@@ -1,0 +1,12 @@
+int reverse(int n){
+    int result = 0;
+    int right_digit;
+    
+    while(n !=0){
+        right_digit = n % 10;
+        n/=10;
+        result = result * 10 + right_digit;
+    }
+    
+    return result;
+}
