@@ -198,6 +198,20 @@ void PrintChar(char* C){
 
 ///////////////////////////////////////
 
+void Reverse(int* A, int size){
+    int start = 0;
+    int end = size-1;
+    
+    while(start < end){
+        swap(A[start],A[end]);
+        start++;
+        end--;
+    }
+    
+}
+
+///////////////////////////////////////
+
 //Calculate function time
 
 // Time in miliseconds
