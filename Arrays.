@@ -222,6 +222,18 @@ void Reverse(int* A, int size){
     
 ////////////////////////////////////////    
 
+#include <bits/stdc++.h>.
+
+using namespace std;
+
+
+int main()
+{
+
+    
+
+}
+    
 void RemoveChars (char* arr, const char* RemoveThis){
     
     int remove [256] = { 0 };
@@ -238,12 +250,13 @@ void RemoveChars (char* arr, const char* RemoveThis){
     
     while(*arr){
         //If !remove then keep it, else skip it
-        if(!remove[*p]){
-            *pDest++ = *p;
+        if(!remove[*arr]){
+            *Dest++ = *arr;
         }
         arr++;
         }
     
     *Dest='\0';
+    
 }
 
