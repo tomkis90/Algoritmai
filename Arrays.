@@ -219,6 +219,31 @@ void Reverse(int* A, int size){
 //Function
     int stop_s=clock();
     cout << endl << "time: " << (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000 << endl << endl;
+    
+////////////////////////////////////////    
 
-
+void RemoveChars (char* arr, const char* RemoveThis){
+    
+    int remove [256] = { 0 };
+    
+    if(NULL == arr || NULL == RemoveThis){
+        return;
+    }
+    //Put in chars to remove
+    
+    while(*RemoveThis){
+        remove[*RemoveThis++] = true;
+    }
+    char* Dest = arr;
+    
+    while(*arr){
+        //If !remove then keep it, else skip it
+        if(!remove[*p]){
+            *pDest++ = *p;
+        }
+        arr++;
+        }
+    
+    *Dest='\0';
+}
 
