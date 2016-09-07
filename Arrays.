@@ -6,7 +6,7 @@ void InsertionSort(int* A, int size){
         int hole = i;
         int value = A[i];
         
-        while(hole > 0 && A[hole-1] > value){
+        while(hole > 0 && A[hole-1] > value){  // (hole > 0 && A[hole-1] < value) for reverse
             A[hole] = A[hole-1];
             hole-=1;
         }
