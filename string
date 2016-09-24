@@ -1,0 +1,6 @@
+string B;
+    getline(cin,B);
+    
+    for(string::size_type i = 0; i < B.size(); ++i){
+        cout << B[i];
+    }
